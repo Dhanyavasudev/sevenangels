@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Services | Seven Angels Shipping LLC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="img/sevenangelsslogo.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --ocean-dark: #020817;
+            --ocean-mid: #08172f;
+            --ocean-blue: #123d72;
+            --glow: #00e0ff;
+            --glow-soft: rgba(0, 224, 255, 0.52);
+            --text-light: #eaf4ff;
+            --text-muted: #a9c1db;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #071938 0%, #020817 45%, #00040c 100%);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ===================== NAVBAR ===================== */
+        .sa-navbar {
+            background: rgba(3, 11, 32, 0.7);
+            backdrop-filter: blur(14px);
+            transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.2s ease;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.18);
+            z-index: 9999;
+        }
+
+        .sa-navbar.scrolled {
+            background: rgba(5, 16, 43, 0.97);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.65);
+        }
+
+        .sa-navbar .navbar-brand img {
+            height: 140px;
+        }
+
+        @media (max-width: 480px) {
+            .sa-navbar .navbar-brand img {
+                height: 55px;
+            }
+        }
+
+        .sa-navbar .nav-link {
+            color: #E3EEFF !important;
+            font-weight: 500;
+            padding: 12px 16px;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            position: relative;
+        }
+
+        .sa-navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00e0ff, #64b5f6);
+            transform: translateX(-50%);
+            transition: width 0.25s ease;
+        }
+
+        .sa-navbar .nav-link:hover::after,
+        .sa-navbar .nav-link.active::after {
+            width: 46%;
+        }
+
+        .dropdown-menu {
+            background: #061326;
+            border: 1px solid var(--glow-soft);
+        }
+
+        .dropdown-item {
+            color: var(--text-light) !important;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(0, 224, 255, 0.15);
+            color: var(--glow) !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .phone-badge {
+            background: rgba(0, 20, 46, 0.88);
+            border: 1px solid var(--glow-soft);
+            padding: 6px 14px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .phone-badge i {
+            color: var(--glow);
+        }
+
+        /* ================= HERO ================= */
+        .services-hero {
+            background: linear-gradient(to bottom, rgba(0, 12, 29, .55), rgba(0, 12, 29, .92)), url('img/carousel-1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            min-height: 360px;
+            margin-top: 92px;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        .services-hero-content {
+            max-width: 800px;
+        }
+
+        .kicker {
+            color: var(--glow);
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .services-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .services-hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--glow), #0095cf);
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 224, 255, 0.4);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 224, 255, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2rem;
+            }
+
+            .services-hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* ================= WATER FLOW ================= */
+        .water-flow {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .water-flow svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ================= SERVICES SECTION ================= */
+        .services-premium {
+            padding: 80px 0;
+            background: var(--ocean-dark);
+        }
+
+        .services-premium h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(8, 23, 47, 0.8), rgba(2, 8, 23, 0.9));
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 12px;
+            padding: 32px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--glow);
+            box-shadow: 0 8px 32px rgba(0, 224, 255, 0.3);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--glow);
+            margin-bottom: 16px;
+        }
+
+        .service-card small {
+            display: block;
+            color: var(--glow);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-card h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .service-meta {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 224, 255, 0.15);
+        }
+
+        .btn-service {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(0, 224, 255, 0.1);
+            color: var(--glow);
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: 1px solid var(--glow);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-service:hover {
+            background: var(--glow);
+            color: #000;
+        }
+
+        /* ================= PROCESS SECTION ================= */
+        .process-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #020817 0%, #08172f 100%);
+        }
+
+        .process-step {
+            background: linear-gradient(145deg, rgba(18, 61, 114, 0.15), rgba(2, 8, 23, 0.3));
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--glow);
+            box-shadow: 0 8px 24px rgba(0, 224, 255, 0.25);
+        }
+
+        .process-step span {
+            display: inline-block;
+            background: var(--glow);
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .process-step h5 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ================= QUOTE SECTION ================= */
+        .quote-section {
+            padding: 80px 0;
+            background: var(--ocean-dark);
+        }
+
+        .quote-card {
+            background: linear-gradient(145deg, rgba(8, 23, 47, 0.8), rgba(2, 8, 23, 0.9));
+            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .quote-card .form-control {
+            background: rgba(0, 20, 46, 0.6);
+            border: 1px solid rgba(0, 224, 255, 0.3);
+            color: var(--text-light);
+            padding: 12px 16px;
+            border-radius: 6px;
+        }
+
+        .quote-card .form-control:focus {
+            background: rgba(0, 20, 46, 0.8);
+            border-color: var(--glow);
+            color: #fff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 224, 255, 0.15);
+        }
+
+        .quote-card .form-control::placeholder {
+            color: rgba(169, 193, 219, 0.6);
+        }
+
+        .btn-quote {
+            background: linear-gradient(135deg, var(--glow), #0095cf);
+            color: #000;
+            border: none;
+            padding: 14px 24px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 224, 255, 0.5);
+        }
+
+        .text-glow {
+            color: var(--glow);
+            font-weight: 600;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: linear-gradient(180deg, #020817 0%, #000510 100%);
+            border-top: 1px solid rgba(0, 224, 255, 0.2);
+            padding-top: 60px;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--glow);
+        }
+
+        /* ================= WHATSAPP BUTTON ================= */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 92px;
+            right: 22px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at top left, #00e0ff, #0095cf);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #00121e;
+            font-size: 32px;
+            text-decoration: none;
+            z-index: 999999;
+            box-shadow:
+                0 0 18px rgba(0, 224, 255, 0.7),
+                0 0 32px rgba(0, 224, 255, 0.45),
+                inset 0 0 18px rgba(0, 224, 255, 0.35);
+            animation: pulseGlow 2.3s infinite ease-in-out;
+            transition: 0.25s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-6px) scale(1.06);
+            box-shadow:
+                0 0 28px rgba(0, 224, 255, 1),
+                0 0 50px rgba(0, 224, 255, 0.75),
+                inset 0 0 25px rgba(0, 224, 255, 0.55);
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow:
+                    0 0 18px rgba(0, 224, 255, 0.7),
+                    0 0 32px rgba(0, 224, 255, 0.45),
+                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 28px rgba(0, 224, 255, 0.95),
+                    0 0 60px rgba(0, 224, 255, 0.65),
+                    inset 0 0 25px rgba(0, 224, 255, 0.65);
+                transform: scale(1.08);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 18px rgba(0, 224, 255, 0.7),
+                    0 0 32px rgba(0, 224, 255, 0.45),
+                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 80px;
+                right: 16px;
+                font-size: 28px;
+            }
+        }
+
+        /* ================= BACK TO TOP ================= */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 22px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--glow), #0095cf);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999998;
+            box-shadow: 0 4px 20px rgba(0, 224, 255, 0.4);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0, 224, 255, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav id="saNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top sa-navbar">
+        <div class="container-fluid px-4">
+
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/SEVEN ANGELS (1).png" alt="Seven Angels Shipping Logo">
+                <span class="ms-3 fw-bold text-light" style="letter-spacing:0.08em;">
+                    Seven Angels Shipping LLC
+                </span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navMenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="service.html">SERVICES</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">BLOGS</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Read Blogs</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                    <!-- PHONE BADGE (desktop only) -->
+                    <!-- PHONE BADGE (desktop only) -->
+                    <!-- PHONE BADGE (desktop only) -->
+                    <li class="nav-item d-none d-lg-block ms-lg-2">
+                        <span class="phone-badge">
+                            <i class="fa fa-phone"></i> <strong>Toll Free 800 742 823 , +971 4296 5595</strong>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <div class="kicker">MARITIME • OFFSHORE • ENGINEERING</div>
+                <h1>Comprehensive Global Vessel Support</h1>
+                <p>From vessel registration and offshore corporations to crew documentation, surveys and engineering,
+                    Seven Angels Shipping LLC delivers end-to-end services aligned with international maritime
+                    standards.</p>
+                <a href="#quote-section" class="hero-cta">Request Quote <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE -->
+    <div class="water-flow">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,40 C300,120 600,-20 1200,50 L1200 120 L0 120 Z" fill="#00b4ff" />
+        </svg>
+    </div>
+
+    <!-- ================= SERVICES GRID ================= -->
+    <section class="services-premium">
+        <div class="container">
+            <h2>Comprehensive Global Vessel Support</h2>
+            <p class="section-desc">
+                From vessel registration and offshore corporations to crew documentation, surveying and engineering,
+                Seven Angels Shipping provides end-to-end maritime services aligned with international standards,
+                coordinating seamlessly between clients and suppliers.
+            </p>
+
+            <!-- Contact Routing -->
+            <p style="color:#9fb6da;font-size:0.9rem;text-align:center;margin-bottom:40px;">
+                operations@sevenangelshipping.com – Vessel Registration, Offshore Corporations, Legal Document
+                Support<br>
+                crewing@sevenangelshipping.com – Crew Documentation<br>
+                technical@sevenangelshipping.com – Marine Surveying &amp; Engineering
+            </p>
+
+            <div class="row g-4">
+
+                <!-- SERVICE 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-passport"></i>
+                            <small>REGISTRATION & FLAGS</small>
+                            <h4>Vessel Registration</h4>
+                            <p>
+                                End-to-end coordination for flag selection, vessel registration, renewals, change of
+                                ownership, P&amp;I matters and statutory compliance documentation.
+                            </p>
+                            <div class="service-meta">• Flag advisory • Ownership structure • P&amp;I coordination</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-sitemap"></i>
+                            <small>STRUCTURING & SETUP</small>
+                            <h4>Offshore Corporations</h4>
+                            <p>
+                                Coordinating between clients and service providers for acquiring offshore corporate
+                                compliance, registrations and associated documentation.
+                            </p>
+                            <div class="service-meta">• Incorporation • Compliance • Advisory</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-user-shield"></i>
+                            <small>CREW & CERTIFICATION</small>
+                            <h4>Crew Documentation</h4>
+                            <p>
+                                Coordinating with flag administrations for acquisition of endorsements, CDC,
+                                certificates and related seafarer documentation.
+                            </p>
+                            <div class="service-meta">• Endorsements • CDC • Flag administration</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-ship"></i>
+                            <small>SURVEY & INSPECTION</small>
+                            <h4>Marine Surveying</h4>
+                            <p>
+                                Coordinating ship classification, statutory certification, plan approvals,
+                                pre-purchase surveys, service provider approvals and ISM, ISPS and MLC certification.
+                            </p>
+                            <div class="service-meta">• Classification • Statutory • Pre-purchase</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-cogs"></i>
+                            <small>ENGINEERING & NAVAL ARCHITECTURE</small>
+                            <h4>Marine Engineering</h4>
+                            <p>
+                                Coordination support for acquiring manuals, drawings, designs, condition surveys
+                                and other technical documentation required for vessel operations.
+                            </p>
+                            <div class="service-meta">• Manuals • Drawings • Condition surveys</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- SERVICE 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-balance-scale"></i>
+                            <small>LEGAL & COMPLIANCE</small>
+                            <h4>Legal Document Support</h4>
+                            <p>
+                                Coordinating support for legalization and authentication of documents in accordance
+                                with flag administration authority requirements.
+                            </p>
+                            <div class="service-meta">• Legalization • Flag authority • Compliance</div>
+                        </div>
+                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE -->
+    <div class="water-flow">
+        <svg viewBox="0 0 1440 200">
+            <path fill="#020817"
+                d="M0,64L80,80C160,96,320,128,480,144C640,160,800,160,960,144C1120,128,1280,96,1360,80L1440,64L1440,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="process-section">
+        <div class="container text-center mb-5">
+            <h6 style="color:var(--glow);letter-spacing:.18em;">HOW WE WORK</h6>
+            <h2 class="fw-bold">Structured, Compliant & Transparent Process</h2>
+        </div>
+
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <span>STEP 1</span>
+                        <h5>Discovery & Requirements</h5>
+                        <p>We analyze your vessel profile, operations, jurisdiction preference and document needs.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <span>STEP 2</span>
+                        <h5>Planning & Documentation</h5>
+                        <p>We coordinate documentation, surveys, class interaction and compliance structuring.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="process-step">
+                        <span>STEP 3</span>
+                        <h5>Execution and Support</h5>
+                        <p>We proceed with registration, surveys, approvals and remain available for ongoing advisory.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE -->
+    <div class="water-flow">
+        <svg viewBox="0 0 1440 200">
+            <path fill="#020817"
+                d="M0,160L80,149.3C160,139,320,117,480,112C640,107,800,117,960,122.7C1120,128,1280,128,1360,128L1440,128L1440,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- ================= QUOTE FORM ================= -->
+    <!-- REPLACE YOUR EXISTING QUOTE FORM WITH THIS -->
+
+    <div id="quote-section">
+        <div class="container-xxl py-5 quote-section">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+
+                    <!-- Left Info Content -->
+                    <div class="col-lg-5">
+                        <h6 class="text-uppercase mb-3" style="color:#00e0ff;">Request a Quote</h6>
+                        <h1 class="mb-4 fw-bold" style="color:#eaf2ff;">Get a Customized Vessel Support Quote</h1>
+                        <p class="mb-4" style="color:#a9bad8;">
+                            We provide end-to-end support in <strong>vessel registration, marine survey engineering,
+                                offshore corporation setup, and seafarer documentation</strong>. Fill in the details
+                            below and
+                            our dedicated expert will assist you at the earliest.
+                        </p>
+                        <div class="d-flex align-items-center mt-4">
+                            <i class="fa fa-phone-alt fa-2x flex-shrink-0 text-white p-3 rounded-circle"
+                                style="background:radial-gradient(circle,#00e0ff,#007bff);"></i>
+                            <div class="ps-3">
+                                <h6 class="mb-1" style="color:#eaf2ff;">Need assistance?</h6>
+                                <h4 class="m-0 fw-bold" style="color:#00e0ff;">+971 4296 5595</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quote Form - FORMSUBMIT INTEGRATION -->
+                    <div class="col-lg-7">
+                        <div class="rounded-4 text-center p-5 quote-card">
+
+                            <!-- UPDATED FORM WITH FORMSUBMIT -->
+                            <form action="https://formsubmit.co/vishaghs03@gmail.com" method="POST">
+
+                                <!-- Hidden fields for FormSubmit configuration -->
+                                <input type="hidden" name="_subject" value="New Quote Request - Seven Angels Shipping">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none">
+
+                                <div class="row g-3 text-start">
+
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Full_Name" class="form-control border-0"
+                                            placeholder="Full Name" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Company_Name" class="form-control border-0"
+                                            placeholder="Company Name" required style="height: 55px;">
+                                    </div>
+
+                                    <div class="col-12 col-sm-6">
+                                        <input type="tel" name="Mobile_Number" class="form-control border-0"
+                                            placeholder="Mobile Number" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" name="Email_Address" class="form-control border-0"
+                                            placeholder="Email Address" required style="height: 55px;">
+                                    </div>
+
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Vessel_Name" class="form-control border-0"
+                                            placeholder="Vessel Name" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="IMO_Number" class="form-control border-0"
+                                            placeholder="IMO Number" style="height: 55px;">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <input type="text" name="Last_Survey_Status" class="form-control border-0"
+                                            placeholder="Last Survey Status" style="height: 55px;">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea name="Additional_Notes" class="form-control border-0" rows="3"
+                                            placeholder="Additional Notes"></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <input type="file" name="attachment" class="form-control border-0"
+                                            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="height: auto;">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn w-100 py-3 fw-semibold"
+                                            style="background:linear-gradient(135deg,#00e0ff,#007bff);border:none;color:#00121e;">
+                                            Send Quote Request <i class="fa fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Quote Section Styling */
+        .quote-section {
+            background: radial-gradient(circle at top, #071938 0%, #020817 60%, #00040c 100%);
+        }
+
+        .quote-card {
+            border-top: 3px solid #00e0ff;
+            background: rgba(4, 16, 43, 0.96);
+            color: #e9f3ff;
+            border-radius: 18px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+        }
+
+        .quote-card input,
+        .quote-card textarea,
+        .quote-card input:focus,
+        .quote-card textarea:focus {
+            background: rgba(3, 10, 30, 0.9);
+            color: #e9f3ff;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 224, 255, 0.35);
+            box-shadow: none;
+        }
+
+        .quote-card input::placeholder,
+        .quote-card textarea::placeholder {
+            color: #7f8fae;
+        }
+
+        /* Hide honeypot field */
+        input[name="_honey"] {
+            display: none !important;
+        }
+    </style>
+
+    <!-- ================= WHATSAPP BUTTON ================= -->
+    <a href="https://wa.me/+97150436875?text=Hello%20Seven%20Angels%20Shipping%2C%20I%20would%20like%20to%20know%20more%20about%20your%20maritime%20services."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="container-fluid text-light">
+        <div class="container py-5">
+
+            <div class="row gy-5">
+
+                <div class="col-lg-4">
+                    <h2 class="fw-bold text-white">Seven Angels Shipping LLC</h2>
+                    <p>Global specialists in vessel registration, marine engineering, offshore structuring and maritime
+                        compliance.</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Contact</h4>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> Dubai, UAE</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> Operations@sevenangelsshipping.com</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +971 4296 5595</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a href="index.html" class="d-block mb-2">Home</a>
+                    <a href="about.html" class="d-block mb-2">About Us</a>
+                    <a href="service.html" class="d-block mb-2">Services</a>
+                    <a href="contact.html" class="d-block mb-2">Contact</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center py-3">
+            © <span id="year"></span> Seven Angels Shipping LLC. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- ================= JS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const navbar = document.getElementById("saNavbar");
+        window.addEventListener("scroll", () => {
+            navbar.classList.toggle("scrolled", window.scrollY > 40);
+        });
+        const toTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 250) toTop.classList.add('show');
+            else toTop.classList.remove('show');
+        });
+    </script>
+
+</body>
+
+</html>

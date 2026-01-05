@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us | Seven Angels Shipping LLC | Maritime & Offshore Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Learn more about Seven Angels Shipping LLC, our history, mission, values and global expertise in vessel registration, offshore corporations, marine surveying and maritime engineering.">
+    <meta name="keywords"
+        content="Seven Angels Shipping, About Seven Angels, Maritime Consultancy, Offshore Services, Vessel Registration Dubai, Marine Survey, Offshore Engineering">
+    <link rel="canonical" href="https://www.sevenangelsshipping.com/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Seven Angels Shipping LLC - Maritime & Offshore Experts">
+    <meta property="og:description" content="Discover our mission, values and global maritime experience.">
+    <meta property="og:image" content="img/sevenangelsslogo.png">
+    <meta property="og:url" content="https://www.sevenangelsshipping.com/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link href="img/sevenangelsslogo.png" rel="icon">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries & Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ================== PAGE CSS ================== -->
+    <style>
+        :root {
+            --sa-blue-main: #1A73E8;
+            --sa-blue-deep: #0B4BB3;
+            --sa-blue-soft: #64B5F6;
+            --sa-dark: #0A2D5A;
+            --sa-bg-deep: #020817;
+            --sa-text-main: #E5EEFF;
+            --sa-text-muted: #A5B6D8;
+            --midnight-blue: #061A3A;
+            --ocean-glow: #00E0FF;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #071938 0%, #020817 45%, #00040c 100%);
+            color: var(--sa-text-main);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ===================== NAVBAR ===================== */
+        .sa-navbar {
+            background: rgba(3, 11, 32, 0.7);
+            backdrop-filter: blur(14px);
+            transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.2s ease;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 224, 255, 0.18);
+            z-index: 9999;
+        }
+
+        .sa-navbar.scrolled {
+            background: rgba(5, 16, 43, 0.97);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.65);
+        }
+
+        .sa-navbar .navbar-brand img {
+            height: 140px;
+            width: auto;
+        }
+
+        @media (max-width: 480px) {
+            .sa-navbar .navbar-brand img {
+                height: 65px;
+            }
+        }
+
+        .sa-navbar .navbar-brand h2 {
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .sa-navbar .nav-link {
+            color: #E3EEFF !important;
+            font-weight: 500;
+            padding: 12px 16px;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .sa-navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00e0ff, #64b5f6);
+            transform: translateX(-50%);
+            transition: width 0.25s ease;
+        }
+
+        .sa-navbar .nav-link:hover {
+            color: #00e0ff !important;
+        }
+
+        .sa-navbar .nav-link:hover::after,
+        .sa-navbar .nav-link.active::after {
+            width: 46%;
+        }
+
+        .dropdown-menu {
+            border-radius: 14px;
+            background: #050e24;
+            border: 1px solid rgba(0, 224, 255, 0.25);
+            padding: 6px 0;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .dropdown-menu .dropdown-item {
+            padding: 10px 18px;
+            font-size: 0.85rem;
+            color: #e6f1ff;
+        }
+
+        .dropdown-menu .dropdown-item:hover {
+            background: rgba(0, 224, 255, 0.08);
+            color: #00e0ff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-collapse {
+            text-align: right;
+        }
+
+        .phone-badge {
+            background: rgba(2, 23, 63, 0.95);
+            border: 1px solid rgba(0, 224, 255, 0.35);
+            color: #f0f7ff;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 0 18px rgba(0, 224, 255, 0.25);
+            white-space: nowrap;
+        }
+
+        .phone-badge i {
+            color: #00e0ff;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: rgba(3, 11, 32, 0.98);
+                margin-top: 8px;
+                border-radius: 0 0 12px 12px;
+                padding: 8px 0;
+            }
+
+            .phone-badge {
+                display: none !important;
+            }
+
+            .sa-navbar .nav-link {
+                padding: 10px 18px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .sa-navbar .navbar-brand h2 {
+                font-size: 14px;
+            }
+        }
+
+        /* ===================== HERO (ABOUT) ===================== */
+        .about-hero {
+            margin-top: 90px;
+            padding: 80px 0 60px;
+            background:
+                radial-gradient(circle at top, rgba(0, 224, 255, 0.35), transparent 55%),
+                radial-gradient(circle at bottom, #020817 0%, #00040c 60%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 224, 255, 0.2), transparent 70%);
+            top: -80px;
+            right: -120px;
+            opacity: 0.6;
+            filter: blur(2px);
+        }
+
+        .about-hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        .about-hero-text p {
+            color: #c8daf5;
+            max-width: 540px;
+            font-size: 0.98rem;
+        }
+
+        .breadcrumb-sa {
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #7ea7ff;
+        }
+
+        .breadcrumb-sa a {
+            color: #a9bad8;
+        }
+
+        .about-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.32rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(0, 224, 255, 0.4);
+            color: #eaf4ff;
+            font-size: 0.75rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .about-hero-badge i {
+            color: #00e0ff;
+        }
+
+        .about-hero-visual {
+            position: relative;
+            height: 280px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .about-hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(92%) contrast(108%);
+        }
+
+        .about-hero-tag {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(3, 15, 40, 0.85);
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            color: #dff6ff;
+            border: 1px solid rgba(0, 224, 255, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .about-hero-tag i {
+            color: #00e0ff;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 60px 0 40px;
+            }
+
+            .about-hero-text h1 {
+                font-size: 2.1rem;
+            }
+
+            .about-hero-visual {
+                margin-top: 24px;
+                height: 220px;
+            }
+        }
+
+        /* ================= ABOUT MAIN (DEEP SECTION) ================= */
+        .about-main {
+            background: radial-gradient(circle at top left, #071938 0%, #041024 40%, #020817 100%);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section-title h2 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .about-section-title p {
+            color: #a9bad8;
+            max-width: 680px;
+        }
+
+        .about-icon-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .about-icon-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(0, 224, 255, 0.08);
+            color: #daf2ff;
+            border: 1px solid rgba(0, 224, 255, 0.3);
+            font-size: 0.8rem;
+        }
+
+        .about-icon-pill i {
+            color: #00e0ff;
+        }
+
+        .about-card {
+            background: rgba(9, 25, 58, 0.86);
+            border-radius: 20px;
+            padding: 22px 22px 20px;
+            border: 1px solid rgba(0, 224, 255, 0.32);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+            height: 100%;
+        }
+
+        .about-card h4 {
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .about-card p {
+            color: #c7daf7;
+            font-size: 0.92rem;
+        }
+
+        .about-chip {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #89cfff;
+        }
+
+        /* ================= TIMELINE / JOURNEY ================= */
+        .journey-section {
+            padding: 70px 0 40px;
+            background: radial-gradient(circle at top, #050f29 0%, #020817 60%);
+        }
+
+        .journey-badge {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #7fb8ff;
+        }
+
+        .journey-item {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 24px;
+        }
+
+        .journey-item::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00e0ff;
+            box-shadow: 0 0 12px rgba(0, 224, 255, 0.8);
+        }
+
+        .journey-item::after {
+            content: "";
+            position: absolute;
+            left: 12px;
+            top: 18px;
+            width: 2px;
+            height: calc(100% - 10px);
+            background: linear-gradient(to bottom, rgba(0, 224, 255, 0.6), transparent);
+        }
+
+        .journey-item:last-child::after {
+            display: none;
+        }
+
+        .journey-item h5 {
+            color: #eaf2ff;
+            margin-bottom: 4px;
+        }
+
+        .journey-item span {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #88a7d8;
+        }
+
+        .journey-item p {
+            font-size: 0.9rem;
+            color: #c0d3f5;
+        }
+
+        /* ================= GLOBAL PRESENCE / METRICS ================= */
+        .metrics-section {
+            padding: 60px 0 40px;
+            background: radial-gradient(circle at top left, #071938 0%, #020817 40%, #00040c 100%);
+        }
+
+        .metric-card {
+            background: radial-gradient(circle at top, #071838 0%, #020817 70%);
+            border-radius: 18px;
+            padding: 20px 22px;
+            border: 1px solid rgba(0, 224, 255, 0.24);
+            text-align: left;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+        }
+
+        .metric-number {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: #00e0ff;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #d8e5ff;
+        }
+
+        .metric-tag {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: #8fb8ff;
+        }
+
+        /* ================= LEADERSHIP SNAPSHOT ================= */
+        .leadership-section {
+            padding: 60px 0 80px;
+            background: radial-gradient(circle at bottom, #050f29 0%, #020817 70%);
+        }
+
+        .leader-card {
+            background: radial-gradient(circle at top, #071838 0%, #020817 70%);
+            border-radius: 16px;
+            padding: 18px;
+            text-align: center;
+            border: 1px solid rgba(0, 224, 255, 0.26);
+            box-shadow: 0 16px 38px rgba(0, 0, 0, 0.8);
+            height: 100%;
+        }
+
+        .leader-avatar {
+            width: 86px;
+            height: 86px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 12px;
+            border: 2px solid rgba(0, 224, 255, 0.6);
+        }
+
+        .leader-card h5 {
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .leader-card span {
+            font-size: 0.8rem;
+            color: #7fb8ff;
+        }
+
+        .leader-card p {
+            font-size: 0.86rem;
+            color: #c2d4f3;
+            margin-top: 8px;
+        }
+
+        .leader-link {
+            font-size: 0.82rem;
+            color: #00e0ff;
+        }
+
+        /* ================= CTA MINI ================= */
+        .mini-cta {
+            margin-top: 30px;
+            padding: 20px 22px;
+            border-radius: 18px;
+            background: radial-gradient(circle at left, rgba(0, 224, 255, 0.25), transparent 65%);
+            border: 1px dashed rgba(0, 224, 255, 0.4);
+        }
+
+        .btn-mini-cta {
+            background: #00e0ff;
+            color: #001423;
+            padding: 9px 20px;
+            border-radius: 999px;
+            border: none;
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .btn-mini-cta:hover {
+            background: #5af1ff;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            margin-top: 0;
+            background: radial-gradient(circle at top, #101744 0%, #050b24 40%, #00040c 100%);
+        }
+
+        footer p,
+        footer a {
+            color: #cbd6ff;
+        }
+
+        footer h4,
+        footer h2 {
+            color: #ffffff;
+        }
+
+        footer .btn-square {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-bottom {
+            background: #030715;
+        }
+
+        /* ================= BACK TO TOP ================= */
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #00e0ff, #0095cf);
+            color: #002235;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 224, 255, 0.35);
+            z-index: 9999;
+            transition: 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(0, 224, 255, 0.45);
+        }
+
+        @media (max-width: 480px) {
+            .back-to-top {
+                right: 16px;
+                bottom: 16px;
+                width: 46px;
+                height: 46px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav id="saNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top sa-navbar">
+        <div class="container-fluid px-4">
+
+            <!-- BRAND -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/SEVEN ANGELS (1).png" alt="Seven Angels Logo">
+                <div class="ms-3">
+                    <h2>Seven Angels Shipping LLC</h2>
+                </div>
+            </a>
+
+            <!-- TOGGLER BUTTON -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU ITEMS -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="blog.html">Read blogs</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <!-- PHONE BADGE (desktop only) -->
+                    <li class="nav-item d-none d-lg-block ms-lg-2">
+                        <span class="phone-badge">
+                            <i class="fa fa-phone"></i> Toll Free 800 742 823 , +971 4296 5595
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- ================= NAVBAR END ================= -->
+
+
+    <!-- ================= HERO: ABOUT ================= -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 about-hero-text">
+                    <div class="breadcrumb-sa mb-2">
+                        <a href="index.html">Home</a> <span class="mx-2">/</span> <span>About Us</span>
+                    </div>
+
+                    <div class="about-hero-badge mb-3">
+                        <i class="fa fa-water"></i>
+                        Seven Angels Shipping LLC
+                    </div>
+
+                    <h1 class="mb-3">ABOUT OUR MARITIME EXPERTISE</h1>
+                    <p>
+                        Seven Angels Shipping LLC is a specialist maritime services company based in Dubai, delivering
+                        end-to-end support for ship owners, operators, agents, offshore corporations and maritime
+                        professionals across the globe.
+                    </p>
+                    <p>
+                        From vessel registration and offshore structuring to marine surveying and technical engineering,
+                        we partner with clients at every stage of their maritime journey.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="about-hero-visual">
+                        <img src="img/carousel-1.jpg" alt="Seven Angels - Maritime Operations">
+                        <div class="about-hero-tag">
+                            <i class="fa fa-globe"></i>
+                            Trusted by clients across 15+ countries
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN ABOUT CONTENT ================= -->
+    <section class="about-main">
+        <div class="container">
+            <div class="row g-4 align-items-start mb-4">
+                <div class="col-lg-7">
+                    <div class="about-section-title mb-3">
+                        <h2>Who We Are</h2>
+                        <p>
+                            Seven Angels Shipping LLC supports stakeholders across the maritime and offshore ecosystem:
+                            ship builders, owners, agents, charterers, seafarers, offshore operators, underwriters
+                            and maritime law professionals. We streamline complex regulatory, technical and operational
+                            requirements into clear, manageable processes.
+                        </p>
+                    </div>
+
+                    <p style="color:#c7daf7;font-size:0.96rem;">
+                        Operating from Dubai, we remain in close coordination with multiple flag states and
+                        classification societies, providing structured support to ensure that vessels, corporations
+                        and seafarers remain compliant with IMO conventions, flag requirements and international
+                        maritime standards. Our approach combines domain experience, disciplined documentation
+                        practices and client-centric coordination.
+                    </p>
+
+                    <div class="about-icon-strip">
+                        <span class="about-icon-pill">
+                            <i class="fa fa-ship"></i> Vessel Registration &amp; Flag State Support
+                        </span>
+                        <span class="about-icon-pill">
+                            <i class="fa fa-balance-scale"></i> Legal &amp; Regulatory Guidance
+                        </span>
+                        <span class="about-icon-pill">
+                            <i class="fa fa-cogs"></i> Technical &amp; Engineering Support
+                        </span>
+                        <span class="about-icon-pill">
+                            <i class="fa fa-users"></i> Crew &amp; Seafarer Documentation Support
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="about-card mb-3">
+                        <div class="about-chip mb-1">Mission</div>
+                        <h4>Progressive, Precise &amp; Practical Maritime Support</h4>
+                        <p>
+                            To uphold exceptional quality of service by delivering progressive and precise professional,
+                            technical and operational solutions that help our clients navigate complex maritime and
+                            offshore environments with confidence.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-chip mb-1">Core Values – M O V E</div>
+                        <h4>Motivation, Ownership, Values &amp; Enterprise</h4>
+                        <p class="mb-2">
+                            Our work is driven by accountability, reliability and long-term relationships. Every
+                            engagement is guided by integrity, respect for regulatory frameworks and a commitment
+                            to operational excellence.
+                        </p>
+                        <p class="mb-0" style="font-size:0.85rem;color:#8fb8ff;">
+                            We move with our clients from initial consultation through certification and ongoing
+                            compliance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= JOURNEY / TIMELINE ================= -->
+    <section class="journey-section">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-6">
+                    <div class="journey-badge mb-2">Our Journey</div>
+                    <h2 class="mb-3" style="color:#eaf2ff;">Built on Experience & Maritime Trust</h2>
+                    <p style="color:#c0d3f5;">
+                        Seven Angels Shipping LLC has evolved as a partner of choice for owners, operators and offshore
+                        entities that require reliable support in paperwork, compliance and technical coordination.
+                    </p>
+                    <p style="color:#c0d3f5;">
+                        Instead of isolated services, we bring an integrated ecosystem perspective – connecting
+                        regulatory
+                        requirements, operational realities and commercial objectives.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="journey-item">
+                        <span>Phase 01</span>
+                        <h5>Foundation in Maritime Documentation & Liaison</h5>
+                        <p>
+                            Started with a strong focus on vessel documentation, regulatory liaison and coordination
+                            with
+                            flag administrations and survey bodies.
+                        </p>
+                    </div>
+                    <div class="journey-item">
+                        <span>Phase 02</span>
+                        <h5>Expansion into Offshore Corporations & Crew Support</h5>
+                        <p>
+                            Extended services to include offshore corporate setup, compliance structuring and seafarer
+                            documentation – enabling smoother operations for ship owners and managers.
+                        </p>
+                    </div>
+                    <div class="journey-item">
+                        <span>Phase 03</span>
+                        <h5>Integrated Marine Survey & Engineering Support</h5>
+                        <p>
+                            Brought specialized partners and technical consultants to assist in surveys, inspections and
+                            engineering evaluations for a wide range of vessels and operations.
+                        </p>
+                    </div>
+                    <div class="journey-item">
+                        <span>Phase 04</span>
+                        <h5>Global Clientele & Multi-Flag Coordination</h5>
+                        <p>
+                            Today, Seven Angels Shipping LLC supports clients across multiple jurisdictions and regions,
+                            coordinating with international stakeholders in a structured, time-bound manner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GLOBAL PRESENCE / METRICS ================= -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="row g-4 align-items-center mb-4">
+                <div class="col-lg-5">
+                    <h2 class="mb-3" style="color:#eaf2ff;">Global Maritime Presence</h2>
+                    <p style="color:#a9bad8;">
+                        Our team has experience working with owners and operators across Asia, Europe, the Middle East
+                        and Africa. We understand regional nuances while aligning them with international maritime
+                        standards.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <div class="metric-tag mb-1">Clients</div>
+                                <div class="metric-number">200+</div>
+                                <div class="metric-label">Maritime & Offshore Clients</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <div class="metric-tag mb-1">Vessels</div>
+                                <div class="metric-number">350+</div>
+                                <div class="metric-label">Vessel Consultancy Projects</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <div class="metric-tag mb-1">Regions</div>
+                                <div class="metric-number">15+</div>
+                                <div class="metric-label">Countries Served Worldwide</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="mini-cta d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+                        <div class="me-md-3 mb-3 mb-md-0">
+                            <h5 class="mb-1" style="color:#eaf2ff;">Looking for a long-term maritime partner?</h5>
+                            <p class="mb-0" style="color:#a9bad8;font-size:0.9rem;">
+                                Explore our services for vessel registration, offshore corporations, marine surveys and
+                                compliance support.
+                            </p>
+                        </div>
+                        <div class="text-md-end">
+                            <a href="service.html" class="btn-mini-cta">View Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LEADERSHIP SNAPSHOT ================= -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="journey-badge mb-2">Leadership & Expertise</div>
+                <h2 style="color:#eaf2ff;">People Behind Seven Angels Shipping LLC</h2>
+                <p style="color:#a9bad8;max-width:640px;margin:10px auto 0;">
+                    Our team brings together focused expertise in vessel registration, flag coordination,
+                    technical oversight and seafarer documentation to support clients across the maritime sector.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <img src="img/team-1.jpg" alt="Leadership Member">
+                        </div>
+                        <h5>Senior Officer – Registration &amp; Offshore Company Advisory</h5>
+                        <span>Flag &amp; Compliance Coordination</span>
+                        <p>
+                            Supports vessel registration activities and manages overseas interactions through
+                            flag administrations, ensuring compliance with applicable regulatory frameworks.
+                        </p>
+                        <a href="team.html" class="leader-link">View full team &raquo;</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <img src="img/team-2.jpg" alt="Leadership Member">
+                        </div>
+                        <h5>Coordinator – Technical Officer</h5>
+                        <span>Technical Coordination</span>
+                        <p>
+                            Provides coordination support for technical documentation, surveys and engineering
+                            requirements related to vessel operations and compliance processes.
+                        </p>
+                        <a href="team.html" class="leader-link">Meet our experts &raquo;</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="leader-card">
+                        <div class="leader-avatar">
+                            <img src="img/team-3.jpg" alt="Leadership Member">
+                        </div>
+                        <h5>Coordinator – Seafarer Documentation</h5>
+                        <span>End-to-End Client Support</span>
+                        <p>
+                            Provides end-to-end support to seafarers for acquiring flag documentation and
+                            coordinating with administrations in accordance with STCW requirements.
+                        </p>
+                        <a href="contact.html" class="leader-link">Connect with us &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= WHATSAPP BUTTON (NEON CYAN + PULSE) ================= -->
+    <style>
+        /* Neon Ocean WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 92px;
+            right: 22px;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at top left, #00e0ff, #0095cf);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #00121e;
+            font-size: 32px;
+            text-decoration: none;
+            z-index: 999999;
+            box-shadow:
+                0 0 18px rgba(0, 224, 255, 0.7),
+                0 0 32px rgba(0, 224, 255, 0.45),
+                inset 0 0 18px rgba(0, 224, 255, 0.35);
+            animation: pulseGlow 2.3s infinite ease-in-out;
+            transition: 0.25s ease;
+        }
+
+        /* Strong hover bounce */
+        .whatsapp-float:hover {
+            transform: translateY(-6px) scale(1.06);
+            box-shadow:
+                0 0 28px rgba(0, 224, 255, 1),
+                0 0 50px rgba(0, 224, 255, 0.75),
+                inset 0 0 25px rgba(0, 224, 255, 0.55);
+        }
+
+        /* PULSATING EFFECT */
+        @keyframes pulseGlow {
+            0% {
+                box-shadow:
+                    0 0 18px rgba(0, 224, 255, 0.7),
+                    0 0 32px rgba(0, 224, 255, 0.45),
+                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                transform: scale(1);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 28px rgba(0, 224, 255, 0.95),
+                    0 0 60px rgba(0, 224, 255, 0.65),
+                    inset 0 0 25px rgba(0, 224, 255, 0.65);
+                transform: scale(1.08);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 18px rgba(0, 224, 255, 0.7),
+                    0 0 32px rgba(0, 224, 255, 0.45),
+                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 80px;
+                right: 16px;
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+97150436875?text=Hello%20Seven%20Angels%20Shipping%2C%20I%20would%20like%20to%20know%20more%20about%20your%20maritime%20services."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="container-fluid text-light">
+        <div class="container py-5">
+            <div class="row gy-5">
+                <!-- About Section -->
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <h2 class="fw-bold text-white mb-3">
+                        <i class="fa fa-ship me-2"></i>Seven Angels Shipping LLC
+                    </h2>
+
+                    <p class="mb-4">
+                        A global leader in vessel registration, offshore corporation support, marine survey engineering,
+                        and maritime consultancy services.
+                        Delivering trusted expertise across international waters.
+                    </p>
+
+                    <form action="https://formsubmit.co/vishaghs03@gmail.com" method="POST" class="d-flex">
+
+                        <!-- FormSubmit core -->
+                        <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <input type="email" name="Subscriber_Email" class="form-control border-0 rounded-start"
+                            placeholder="Your Email" required>
+
+                        <button type="submit" class="btn btn-dark rounded-end">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Get In Touch</h4>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i> G+M+3 Building, Office M07, Al Wuheida St., P.O. Box
+                        13570, Dubai, UAE</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> Operations@sevenangelsshipping.com</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i> +971 4296 5595</p>
+                    <div class="d-flex mt-3">
+                        <a class="btn btn-outline-light btn-square me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column">
+                        <a href="index.html" class="text-white-50 mb-2"><i class="bi bi-arrow-right me-2"></i>Home</a>
+                        <a href="about.html" class="text-white-50 mb-2"><i class="bi bi-arrow-right me-2"></i>About
+                            Us</a>
+                        <a href="service.html" class="text-white-50 mb-2"><i class="bi bi-arrow-right me-2"></i>Our
+                            Services</a>
+                        <a href="team.html" class="text-white-50 mb-2"><i class="bi bi-arrow-right me-2"></i>Our
+                            Team</a>
+                        <a href="contact.html" class="text-white-50"><i class="bi bi-arrow-right me-2"></i>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid py-3 footer-bottom">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">
+                    © <span id="year"></span> <strong>Seven Angels Shipping LLC</strong>. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- JS: jQuery + Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Year in footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Navbar scroll behavior
+        const navbar = document.getElementById("saNavbar");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 40) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        // Back to Top behavior
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+
+</html>
