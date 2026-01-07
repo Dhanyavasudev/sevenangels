@@ -2,12 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Seven Angels Shipping LLC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link href="img/sevenangelsslogo.png" rel="icon">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,7 +40,7 @@
             text-decoration: none;
         }
 
-        /* ===================== NAVBAR ===================== */
+        /* NAVBAR */
         .sa-navbar {
             background: rgba(3, 11, 32, 0.7);
             backdrop-filter: blur(14px);
@@ -124,7 +122,7 @@
             color: var(--glow);
         }
 
-        /* ================= HERO ================= */
+        /* HERO */
         .services-hero {
             background: linear-gradient(to bottom, rgba(0, 12, 29, .55), rgba(0, 12, 29, .92)), url('img/carousel-1.jpg');
             background-size: cover;
@@ -190,7 +188,7 @@
             }
         }
 
-        /* ================= WATER FLOW ================= */
+        /* WATER FLOW */
         .water-flow {
             position: relative;
             width: 100%;
@@ -206,7 +204,7 @@
             height: auto;
         }
 
-        /* ================= SERVICES SECTION ================= */
+        /* SERVICES SECTION */
         .services-premium {
             padding: 80px 0;
             background: var(--ocean-dark);
@@ -302,7 +300,7 @@
             color: #000;
         }
 
-        /* ================= PROCESS SECTION ================= */
+        /* PROCESS SECTION */
         .process-section {
             padding: 80px 0;
             background: linear-gradient(180deg, #020817 0%, #08172f 100%);
@@ -348,60 +346,53 @@
             line-height: 1.6;
         }
 
-        /* ================= QUOTE SECTION ================= */
+        /* QUOTE FORMS - HIDE ALL BY DEFAULT */
+        .quote-section-container {
+            display: none;
+        }
+
+        .quote-section-container.active {
+            display: block;
+        }
+
         .quote-section {
+            background: radial-gradient(circle at top, #071938 0%, #020817 60%, #00040c 100%);
             padding: 80px 0;
-            background: var(--ocean-dark);
         }
 
         .quote-card {
-            background: linear-gradient(145deg, rgba(8, 23, 47, 0.8), rgba(2, 8, 23, 0.9));
-            border: 1px solid rgba(0, 224, 255, 0.2);
+            border-top: 3px solid #00e0ff;
+            background: rgba(4, 16, 43, 0.96);
+            color: #e9f3ff;
+            border-radius: 18px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
+        }
+
+        .quote-card input,
+        .quote-card textarea {
+            background: rgba(3, 10, 30, 0.9) !important;
+            color: #e9f3ff !important;
             border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 224, 255, 0.35) !important;
         }
 
-        .quote-card .form-control {
-            background: rgba(0, 20, 46, 0.6);
-            border: 1px solid rgba(0, 224, 255, 0.3);
-            color: var(--text-light);
-            padding: 12px 16px;
-            border-radius: 6px;
+        .quote-card input:focus,
+        .quote-card textarea:focus {
+            background: rgba(3, 10, 30, 0.9) !important;
+            border-color: #00e0ff !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 224, 255, 0.15) !important;
         }
 
-        .quote-card .form-control:focus {
-            background: rgba(0, 20, 46, 0.8);
-            border-color: var(--glow);
-            color: #fff;
-            box-shadow: 0 0 0 0.2rem rgba(0, 224, 255, 0.15);
+        .quote-card input::placeholder,
+        .quote-card textarea::placeholder {
+            color: #7f8fae !important;
         }
 
-        .quote-card .form-control::placeholder {
-            color: rgba(169, 193, 219, 0.6);
+        input[name="_honey"] {
+            display: none !important;
         }
 
-        .btn-quote {
-            background: linear-gradient(135deg, var(--glow), #0095cf);
-            color: #000;
-            border: none;
-            padding: 14px 24px;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-quote:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(0, 224, 255, 0.5);
-        }
-
-        .text-glow {
-            color: var(--glow);
-            font-weight: 600;
-        }
-
-        /* ================= FOOTER ================= */
+        /* FOOTER & FLOATING BUTTONS */
         footer {
             background: linear-gradient(180deg, #020817 0%, #000510 100%);
             border-top: 1px solid rgba(0, 224, 255, 0.2);
@@ -417,7 +408,6 @@
             color: var(--glow);
         }
 
-        /* ================= WHATSAPP BUTTON ================= */
         .whatsapp-float {
             position: fixed;
             bottom: 92px;
@@ -433,44 +423,29 @@
             font-size: 32px;
             text-decoration: none;
             z-index: 999999;
-            box-shadow:
-                0 0 18px rgba(0, 224, 255, 0.7),
-                0 0 32px rgba(0, 224, 255, 0.45),
-                inset 0 0 18px rgba(0, 224, 255, 0.35);
+            box-shadow: 0 0 18px rgba(0, 224, 255, 0.7), 0 0 32px rgba(0, 224, 255, 0.45), inset 0 0 18px rgba(0, 224, 255, 0.35);
             animation: pulseGlow 2.3s infinite ease-in-out;
             transition: 0.25s ease;
         }
 
         .whatsapp-float:hover {
             transform: translateY(-6px) scale(1.06);
-            box-shadow:
-                0 0 28px rgba(0, 224, 255, 1),
-                0 0 50px rgba(0, 224, 255, 0.75),
-                inset 0 0 25px rgba(0, 224, 255, 0.55);
+            box-shadow: 0 0 28px rgba(0, 224, 255, 1), 0 0 50px rgba(0, 224, 255, 0.75), inset 0 0 25px rgba(0, 224, 255, 0.55);
         }
 
         @keyframes pulseGlow {
             0% {
-                box-shadow:
-                    0 0 18px rgba(0, 224, 255, 0.7),
-                    0 0 32px rgba(0, 224, 255, 0.45),
-                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                box-shadow: 0 0 18px rgba(0, 224, 255, 0.7), 0 0 32px rgba(0, 224, 255, 0.45), inset 0 0 18px rgba(0, 224, 255, 0.35);
                 transform: scale(1);
             }
 
             50% {
-                box-shadow:
-                    0 0 28px rgba(0, 224, 255, 0.95),
-                    0 0 60px rgba(0, 224, 255, 0.65),
-                    inset 0 0 25px rgba(0, 224, 255, 0.65);
+                box-shadow: 0 0 28px rgba(0, 224, 255, 0.95), 0 0 60px rgba(0, 224, 255, 0.65), inset 0 0 25px rgba(0, 224, 255, 0.65);
                 transform: scale(1.08);
             }
 
             100% {
-                box-shadow:
-                    0 0 18px rgba(0, 224, 255, 0.7),
-                    0 0 32px rgba(0, 224, 255, 0.45),
-                    inset 0 0 18px rgba(0, 224, 255, 0.35);
+                box-shadow: 0 0 18px rgba(0, 224, 255, 0.7), 0 0 32px rgba(0, 224, 255, 0.45), inset 0 0 18px rgba(0, 224, 255, 0.35);
                 transform: scale(1);
             }
         }
@@ -485,7 +460,6 @@
             }
         }
 
-        /* ================= BACK TO TOP ================= */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -519,22 +493,16 @@
 </head>
 
 <body>
-
-    <!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
     <nav id="saNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top sa-navbar">
         <div class="container-fluid px-4">
-
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/SEVEN ANGELS (1).png" alt="Seven Angels Shipping Logo">
-                <span class="ms-3 fw-bold text-light" style="letter-spacing:0.08em;">
-                    Seven Angels Shipping LLC
-                </span>
+                <span class="ms-3 fw-bold text-light" style="letter-spacing:0.08em;">Seven Angels Shipping</span>
             </a>
-
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div id="navMenu" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
@@ -547,9 +515,6 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                    <!-- PHONE BADGE (desktop only) -->
-                    <!-- PHONE BADGE (desktop only) -->
-                    <!-- PHONE BADGE (desktop only) -->
                     <li class="nav-item d-none d-lg-block ms-lg-2">
                         <span class="phone-badge">
                             <i class="fa fa-phone"></i> <strong>Toll Free 800 742 823 , +971 4296 5595</strong>
@@ -560,7 +525,7 @@
         </div>
     </nav>
 
-    <!-- ================= HERO ================= -->
+    <!-- HERO -->
     <section class="services-hero">
         <div class="container">
             <div class="services-hero-content">
@@ -581,26 +546,21 @@
         </svg>
     </div>
 
-    <!-- ================= SERVICES GRID ================= -->
+    <!-- SERVICES GRID -->
     <section class="services-premium">
         <div class="container">
             <h2>Comprehensive Global Vessel Support</h2>
             <p class="section-desc">
                 From vessel registration and offshore corporations to crew documentation, surveying and engineering,
-                Seven Angels Shipping provides end-to-end maritime services aligned with international standards,
-                coordinating seamlessly between clients and suppliers.
+                Seven Angels Shipping provides end-to-end maritime services aligned with international standards.
             </p>
-
-            <!-- Contact Routing -->
             <p style="color:#9fb6da;font-size:0.9rem;text-align:center;margin-bottom:40px;">
                 operations@sevenangelshipping.com – Vessel Registration, Offshore Corporations, Legal Document
                 Support<br>
                 crewing@sevenangelshipping.com – Crew Documentation<br>
-                technical@sevenangelshipping.com – Marine Surveying &amp; Engineering
+                technical@sevenangelshipping.com – Marine Surveying & Engineering
             </p>
-
             <div class="row g-4">
-
                 <!-- SERVICE 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
@@ -608,16 +568,14 @@
                             <i class="fa fa-passport"></i>
                             <small>REGISTRATION & FLAGS</small>
                             <h4>Vessel Registration</h4>
-                            <p>
-                                End-to-end coordination for flag selection, vessel registration, renewals, change of
-                                ownership, P&amp;I matters and statutory compliance documentation.
-                            </p>
-                            <div class="service-meta">• Flag advisory • Ownership structure • P&amp;I coordination</div>
+                            <p>End-to-end coordination for flag selection, vessel registration, renewals, change of
+                                ownership, P&I matters and statutory compliance documentation.</p>
+                            <div class="service-meta">• Flag advisory • Ownership structure • P&I coordination</div>
                         </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                        <a href="#quote-section-vishaghs" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
                 <!-- SERVICE 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
@@ -625,16 +583,29 @@
                             <i class="fa fa-sitemap"></i>
                             <small>STRUCTURING & SETUP</small>
                             <h4>Offshore Corporations</h4>
-                            <p>
-                                Coordinating between clients and service providers for acquiring offshore corporate
-                                compliance, registrations and associated documentation.
-                            </p>
+                            <p>Coordinating between clients and service providers for acquiring offshore corporate
+                                compliance, registrations and associated documentation.</p>
                             <div class="service-meta">• Incorporation • Compliance • Advisory</div>
                         </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                        <a href="#quote-section-vishaghs" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
+                <!-- SERVICE 6 - Legal Document Support -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div>
+                            <i class="fa fa-balance-scale"></i>
+                            <small>LEGAL & COMPLIANCE</small>
+                            <h4>Legal Document Support</h4>
+                            <p>Coordinating support for legalization and authentication of documents in accordance with
+                                flag administration authority requirements.</p>
+                            <div class="service-meta">• Legalization • Flag authority • Compliance</div>
+                        </div>
+                        <a href="#quote-section-vishaghs" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
                 <!-- SERVICE 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
@@ -642,16 +613,14 @@
                             <i class="fa fa-user-shield"></i>
                             <small>CREW & CERTIFICATION</small>
                             <h4>Crew Documentation</h4>
-                            <p>
-                                Coordinating with flag administrations for acquisition of endorsements, CDC,
-                                certificates and related seafarer documentation.
-                            </p>
+                            <p>Coordinating with flag administrations for acquisition of endorsements, CDC, certificates
+                                and related seafarer documentation.</p>
                             <div class="service-meta">• Endorsements • CDC • Flag administration</div>
                         </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                        <a href="#quote-section-vishaghs-crew" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
                 <!-- SERVICE 4 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
@@ -659,16 +628,14 @@
                             <i class="fa fa-ship"></i>
                             <small>SURVEY & INSPECTION</small>
                             <h4>Marine Surveying</h4>
-                            <p>
-                                Coordinating ship classification, statutory certification, plan approvals,
-                                pre-purchase surveys, service provider approvals and ISM, ISPS and MLC certification.
-                            </p>
+                            <p>Coordinating ship classification, statutory certification, plan approvals, pre-purchase
+                                surveys, service provider approvals and ISM, ISPS and MLC certification.</p>
                             <div class="service-meta">• Classification • Statutory • Pre-purchase</div>
                         </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                        <a href="#quote-section-dhanyamol" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
                 <!-- SERVICE 5 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card">
@@ -676,33 +643,14 @@
                             <i class="fa fa-cogs"></i>
                             <small>ENGINEERING & NAVAL ARCHITECTURE</small>
                             <h4>Marine Engineering</h4>
-                            <p>
-                                Coordination support for acquiring manuals, drawings, designs, condition surveys
-                                and other technical documentation required for vessel operations.
-                            </p>
+                            <p>Coordination support for acquiring manuals, drawings, designs, condition surveys and
+                                other technical documentation required for vessel operations.</p>
                             <div class="service-meta">• Manuals • Drawings • Condition surveys</div>
                         </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
+                        <a href="#quote-section-dhanyamol" class="btn-service">Get a Quote <i
+                                class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
-                <!-- SERVICE 6 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card">
-                        <div>
-                            <i class="fa fa-balance-scale"></i>
-                            <small>LEGAL & COMPLIANCE</small>
-                            <h4>Legal Document Support</h4>
-                            <p>
-                                Coordinating support for legalization and authentication of documents in accordance
-                                with flag administration authority requirements.
-                            </p>
-                            <div class="service-meta">• Legalization • Flag authority • Compliance</div>
-                        </div>
-                        <a href="#quote-section" class="btn-service">Get a Quote <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -716,16 +664,14 @@
         </svg>
     </div>
 
-    <!-- ================= PROCESS ================= -->
+    <!-- PROCESS -->
     <section class="process-section">
         <div class="container text-center mb-5">
             <h6 style="color:var(--glow);letter-spacing:.18em;">HOW WE WORK</h6>
             <h2 class="fw-bold">Structured, Compliant & Transparent Process</h2>
         </div>
-
         <div class="container">
             <div class="row g-4">
-
                 <div class="col-md-4">
                     <div class="process-step">
                         <span>STEP 1</span>
@@ -733,7 +679,6 @@
                         <p>We analyze your vessel profile, operations, jurisdiction preference and document needs.</p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="process-step">
                         <span>STEP 2</span>
@@ -741,7 +686,6 @@
                         <p>We coordinate documentation, surveys, class interaction and compliance structuring.</p>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="process-step">
                         <span>STEP 3</span>
@@ -750,7 +694,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -764,23 +707,17 @@
         </svg>
     </div>
 
-    <!-- ================= QUOTE FORM ================= -->
-    <!-- REPLACE YOUR EXISTING QUOTE FORM WITH THIS -->
-
-    <div id="quote-section">
+    <!-- ================= QUOTE FORM 1: VISHAGHS03 - Vessel/Offshore/Legal ================= -->
+    <div id="quote-section-vishaghs" class="quote-section-container">
         <div class="container-xxl py-5 quote-section">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
-
-                    <!-- Left Info Content -->
                     <div class="col-lg-5">
                         <h6 class="text-uppercase mb-3" style="color:#00e0ff;">Request a Quote</h6>
-                        <h1 class="mb-4 fw-bold" style="color:#eaf2ff;">Get a Customized Vessel Support Quote</h1>
+                        <h1 class="mb-4 fw-bold" style="color:#eaf2ff;">Vessel Registration & Offshore Services</h1>
                         <p class="mb-4" style="color:#a9bad8;">
-                            We provide end-to-end support in <strong>vessel registration, marine survey engineering,
-                                offshore corporation setup, and seafarer documentation</strong>. Fill in the details
-                            below and
-                            our dedicated expert will assist you at the earliest.
+                            Expert support for <strong>Vessel Registration, Offshore Corporations, Legal Document
+                                Support</strong>.
                         </p>
                         <div class="d-flex align-items-center mt-4">
                             <i class="fa fa-phone-alt fa-2x flex-shrink-0 text-white p-3 rounded-circle"
@@ -791,22 +728,18 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Quote Form - FORMSUBMIT INTEGRATION -->
                     <div class="col-lg-7">
                         <div class="rounded-4 text-center p-5 quote-card">
-
-                            <!-- UPDATED FORM WITH FORMSUBMIT -->
-                            <form action="https://formsubmit.co/vishaghs03@gmail.com" method="POST">
-
-                                <!-- Hidden fields for FormSubmit configuration -->
-                                <input type="hidden" name="_subject" value="New Quote Request - Seven Angels Shipping">
+                            <form action="https://formsubmit.co/operations@sevenangelshipping.com" method="POST">
+                                <input type="hidden" name="_no_redirect" value="true">
+                                <input type="hidden" name="_subject"
+                                    value="🚢 Vessel Registration/Offshore/Legal Quote Request">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="Service_Type"
+                                    value="Vessel Registration / Offshore Corporation / Legal Document Support">
                                 <input type="text" name="_honey" style="display:none">
-
                                 <div class="row g-3 text-start">
-
                                     <div class="col-12 col-sm-6">
                                         <input type="text" name="Full_Name" class="form-control border-0"
                                             placeholder="Full Name" required style="height: 55px;">
@@ -815,7 +748,6 @@
                                         <input type="text" name="Company_Name" class="form-control border-0"
                                             placeholder="Company Name" required style="height: 55px;">
                                     </div>
-
                                     <div class="col-12 col-sm-6">
                                         <input type="tel" name="Mobile_Number" class="form-control border-0"
                                             placeholder="Mobile Number" required style="height: 55px;">
@@ -824,142 +756,249 @@
                                         <input type="email" name="Email_Address" class="form-control border-0"
                                             placeholder="Email Address" required style="height: 55px;">
                                     </div>
-
-                                    <div class="col-12 col-sm-6">
-                                        <input type="text" name="Vessel_Name" class="form-control border-0"
+                                    <div class="col-12">
+                                        <input type="text" name="Vessel_IMO" class="form-control border-0"
                                             placeholder="Vessel Name / IMO Number" style="height: 55px;">
                                     </div>
-
-
-                                    <div class="col-12">
-                                        <input type="text" name="Last_Survey_Status" class="form-control border-0"
-                                            placeholder="Last Survey Status" style="height: 55px;">
-                                    </div>
-
                                     <div class="col-12">
                                         <textarea name="Additional_Notes" class="form-control border-0" rows="3"
-                                            placeholder="Additional Notes"></textarea>
+                                            placeholder="Additional Details"></textarea>
                                     </div>
-
                                     <div class="col-12">
                                         <input type="file" name="attachment" class="form-control border-0"
                                             accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="height: auto;">
                                     </div>
-
                                     <div class="col-12">
                                         <button type="submit" class="btn w-100 py-3 fw-semibold"
                                             style="background:linear-gradient(135deg,#00e0ff,#007bff);border:none;color:#00121e;">
                                             Send Quote Request <i class="fa fa-arrow-right ms-2"></i>
                                         </button>
                                     </div>
-
                                 </div>
                             </form>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <style>
-        /* Quote Section Styling */
-        .quote-section {
-            background: radial-gradient(circle at top, #071938 0%, #020817 60%, #00040c 100%);
-        }
+    <!-- ================= QUOTE FORM 2: VISHAGHS03 - Crew Documentation ================= -->
+    <div id="quote-section-vishaghs-crew" class="quote-section-container">
+        <div class="container-xxl py-5 quote-section">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <h6 class="text-uppercase mb-3" style="color:#00e0ff;">Request a Quote</h6>
+                        <h1 class="mb-4 fw-bold" style="color:#eaf2ff;">Crew Documentation Services</h1>
+                        <p class="mb-4" style="color:#a9bad8;">
+                            Professional support for <strong>Crew Documentation, CDC, endorsements</strong> and seafarer
+                            certification.
+                        </p>
+                        <div class="d-flex align-items-center mt-4">
+                            <i class="fa fa-phone-alt fa-2x flex-shrink-0 text-white p-3 rounded-circle"
+                                style="background:radial-gradient(circle,#00e0ff,#007bff);"></i>
+                            <div class="ps-3">
+                                <h6 class="mb-1" style="color:#eaf2ff;">Need assistance?</h6>
+                                <h4 class="m-0 fw-bold" style="color:#00e0ff;">+971 4296 5595</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="rounded-4 text-center p-5 quote-card">
+                            <form action="https://formsubmit.co/crewings@sevenangelshipping.com" method="POST">
+                                <input type="hidden" name="_no_redirect" value="true">
+                                <input type="hidden" name="_subject" value="👨‍✈️ Crew Documentation Quote Request">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="Service_Type" value="Crew Documentation">
+                                <input type="text" name="_honey" style="display:none">
+                                <div class="row g-3 text-start">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Full_Name" class="form-control border-0"
+                                            placeholder="Full Name" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Company_Name" class="form-control border-0"
+                                            placeholder="Company Name" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="tel" name="Mobile_Number" class="form-control border-0"
+                                            placeholder="Mobile Number" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" name="Email_Address" class="form-control border-0"
+                                            placeholder="Email Address" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" name="Seafarer_Info" class="form-control border-0"
+                                            placeholder="Seafarer Name / Passport Number" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="Additional_Notes" class="form-control border-0" rows="3"
+                                            placeholder="Documentation Requirements"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="file" name="attachment" class="form-control border-0"
+                                            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="height: auto;">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn w-100 py-3 fw-semibold"
+                                            style="background:linear-gradient(135deg,#00e0ff,#007bff);border:none;color:#00121e;">
+                                            Send Quote Request <i class="fa fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        .quote-card {
-            border-top: 3px solid #00e0ff;
-            background: rgba(4, 16, 43, 0.96);
-            color: #e9f3ff;
-            border-radius: 18px;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
-        }
+    <!-- ================= QUOTE FORM 3: DHANYAMOL - Marine Engineering & Surveying ================= -->
+    <div id="quote-section-dhanyamol" class="quote-section-container">
+        <div class="container-xxl py-5 quote-section">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <h6 class="text-uppercase mb-3" style="color:#00e0ff;">Request a Quote</h6>
+                        <h1 class="mb-4 fw-bold" style="color:#eaf2ff;">Marine Surveying & Engineering</h1>
+                        <p class="mb-4" style="color:#a9bad8;">
+                            Technical expertise for <strong>Marine Surveys, Classification, Engineering</strong>
+                            services.
+                        </p>
+                        <div class="d-flex align-items-center mt-4">
+                            <i class="fa fa-phone-alt fa-2x flex-shrink-0 text-white p-3 rounded-circle"
+                                style="background:radial-gradient(circle,#00e0ff,#007bff);"></i>
+                            <div class="ps-3">
+                                <h6 class="mb-1" style="color:#eaf2ff;">Need assistance?</h6>
+                                <h4 class="m-0 fw-bold" style="color:#00e0ff;">+971 4296 5595</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="rounded-4 text-center p-5 quote-card">
+                            <form action="https://formsubmit.co/technical@sevenangelshipping.com" method="POST">
+                                <input type="hidden" name="_no_redirect" value="true">
+                                <input type="hidden" name="_subject" value="⚙️ Marine Engineering & Surveying Quote">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="Service_Type" value="Marine Engineering & Marine Surveying">
+                                <input type="text" name="_honey" style="display:none">
+                                <div class="row g-3 text-start">
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Full_Name" class="form-control border-0"
+                                            placeholder="Full Name" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="text" name="Company_Name" class="form-control border-0"
+                                            placeholder="Company Name" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="tel" name="Mobile_Number" class="form-control border-0"
+                                            placeholder="Mobile Number" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <input type="email" name="Email_Address" class="form-control border-0"
+                                            placeholder="Email Address" required style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" name="Vessel_Info" class="form-control border-0"
+                                            placeholder="Vessel Name / Type" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="Technical_Requirements" class="form-control border-0" rows="3"
+                                            placeholder="Technical Requirements / Survey Details"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="file" name="attachment" class="form-control border-0"
+                                            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="height: auto;">
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn w-100 py-3 fw-semibold"
+                                            style="background:linear-gradient(135deg,#00e0ff,#007bff);border:none;color:#00121e;">
+                                            Send Quote Request <i class="fa fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        .quote-card input,
-        .quote-card textarea,
-        .quote-card input:focus,
-        .quote-card textarea:focus {
-            background: rgba(3, 10, 30, 0.9);
-            color: #e9f3ff;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 224, 255, 0.35);
-            box-shadow: none;
-        }
-
-        .quote-card input::placeholder,
-        .quote-card textarea::placeholder {
-            color: #7f8fae;
-        }
-
-        /* Hide honeypot field */
-        input[name="_honey"] {
-            display: none !important;
-        }
-    </style>
-
-    <!-- ================= WHATSAPP BUTTON ================= -->
-    <a href="https://wa.me/+97150436875?text=Hello%20Seven%20Angels%20Shipping%2C%20I%20would%20like%20to%20know%20more%20about%20your%20maritime%20services."
-        class="whatsapp-float" target="_blank">
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/97142965595?text=Hello%20Seven%20Angels%20Shipping!%20I%20need%20assistance%20with:"
+        class="whatsapp-float" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="container-fluid text-light">
-        <div class="container py-5">
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
 
-            <div class="row gy-5">
-
-                <div class="col-lg-4">
-                    <h2 class="fw-bold text-white">Seven Angels Shipping LLC</h2>
-                    <p>Global specialists in vessel registration, marine engineering, offshore structuring and maritime
-                        compliance.</p>
-                </div>
-
-                <div class="col-lg-4">
-                    <h4 class="text-white mb-4">Contact</h4>
-                    <p><i class="bi bi-geo-alt-fill me-2"></i> Dubai, UAE</p>
-                    <p><i class="bi bi-envelope-fill me-2"></i> Operations@sevenangelsshipping.com</p>
-                    <p><i class="bi bi-telephone-fill me-2"></i> +971 4296 5595</p>
-                </div>
-
-                <div class="col-lg-4">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a href="index.html" class="d-block mb-2">Home</a>
-                    <a href="about.html" class="d-block mb-2">About Us</a>
-                    <a href="service.html" class="d-block mb-2">Services</a>
-                    <a href="contact.html" class="d-block mb-2">Contact</a>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="text-center py-3">
-            © <span id="year"></span> Seven Angels Shipping LLC. All rights reserved.
-        </div>
-    </footer>
-
-    <!-- BACK TO TOP BUTTON -->
-    <a href="#" class="back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-    <!-- ================= JS ================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        const navbar = document.getElementById("saNavbar");
-        window.addEventListener("scroll", () => {
-            navbar.classList.toggle("scrolled", window.scrollY > 40);
-        });
-        const toTop = document.querySelector('.back-to-top');
+        // Navbar scroll effect
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 250) toTop.classList.add('show');
-            else toTop.classList.remove('show');
+            document.getElementById('saNavbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Show specific quote form
+                    if (this.getAttribute('href').includes('quote-section')) {
+                        // Hide all quote sections
+                        document.querySelectorAll('.quote-section-container').forEach(section => {
+                            section.classList.remove('active');
+                        });
+                        // Show clicked section
+                        target.closest('.quote-section-container').classList.add('active');
+
+                        // Scroll to top of form
+                        setTimeout(() => {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 300);
+                    }
+                }
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        });
+
+        // Form submission feedback
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function () {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fa fa-check"></i> Sent Successfully!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                }, 2000);
+            });
         });
     </script>
-
 </body>
 
 </html>
