@@ -850,77 +850,61 @@
                             Our team will respond with a tailored consultation.
                         </p>
 
-                        <form action="https://formsubmit.co/admin@sevenangelshipping.com" method="POST" enctype="multipart/form-data">
-
-                            <!-- FormSubmit core config -->
+                        <form action="https://formsubmit.co/admin@sevenangelshipping.com" method="POST"
+                            enctype="multipart/form-data">
                             <input type="hidden" name="_subject" value="New Enquiry - Website Form">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="Service_Type" value="General Enquiry">
+                            <input type="text" name="_honey" style="position:absolute;left:-9999px;">
 
                             <div class="row g-3">
-
                                 <div class="col-12 col-md-6">
                                     <input type="text" name="Full_Name" class="form-control border-0"
                                         placeholder="Full Name" required
                                         style="height:55px; background:rgba(3,10,30,0.9); color:#e9f3ff;">
                                 </div>
-
                                 <div class="col-12 col-md-6">
                                     <input type="text" name="Company_Name" class="form-control border-0"
                                         placeholder="Company Name"
                                         style="height:55px; background:rgba(3,10,30,0.9); color:#e9f3ff;">
                                 </div>
-
                                 <div class="col-12 col-md-6">
                                     <input type="text" name="Mobile_Number" class="form-control border-0"
                                         placeholder="Mobile Number"
                                         style="height:55px; background:rgba(3,10,30,0.9); color:#e9f3ff;">
                                 </div>
-
                                 <div class="col-12 col-md-6">
                                     <input type="email" name="Email_Address" class="form-control border-0"
                                         placeholder="Email Address" required
                                         style="height:55px; background:rgba(3,10,30,0.9); color:#e9f3ff;">
                                 </div>
-
                                 <div class="col-12 col-md-6">
                                     <input type="text" name="Vessel_or_Project" class="form-control border-0"
                                         placeholder="Vessel Name / IMO Number"
                                         style="height:55px; background:rgba(3,10,30,0.9); color:#e9f3ff;">
                                 </div>
-
-
-
                                 <div class="col-12">
                                     <textarea name="Requirement_Details" class="form-control border-0" rows="4"
                                         placeholder="Describe your requirement..."
                                         style="background:rgba(3,10,30,0.9); color:#e9f3ff;"></textarea>
                                 </div>
-
-                                <!-- File input kept (will NOT be sent by FormSubmit) -->
                                 <div class="col-12">
-                                    <input type="file" class="form-control border-0"
+                                    <input type="file" name="attachment" class="form-control border-0"
+                                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                                         style="background:rgba(3,10,30,0.9); color:#e9f3ff;">
-                                    <small style="color:#7f8fae;">
-                                        Attach any relevant documents (optional — share later via email)
-                                    </small>
+                                    <small style="color:#7f8fae;">Attach any relevant documents (optional — Max
+                                        10MB)</small>
                                 </div>
-
                                 <div class="col-12">
-                                    <button type="submit" class="btn w-100 py-3 fw-semibold" style="
-                    background:linear-gradient(135deg,#00e0ff,#007bff);
-                    color:#00121e;
-                    border:none;
-                    border-radius:8px;
-                ">
+                                    <button type="submit" class="btn w-100 py-3 fw-semibold"
+                                        style="background:linear-gradient(135deg,#00e0ff,#007bff);color:#00121e;border:none;border-radius:8px;">
                                         Submit Enquiry <i class="fa fa-arrow-right ms-2"></i>
                                     </button>
                                 </div>
-
                             </div>
                         </form>
+
 
 
                     </div>
